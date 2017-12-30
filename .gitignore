@@ -1,0 +1,14 @@
+### JetBrains template
+
+# IDE directories
+.idea*
+
+### Node.js template
+
+# Dependency directories
+node_modules/
+
+### Custom
+auth.json
+dist*
+

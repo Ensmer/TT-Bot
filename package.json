@@ -1,0 +1,19 @@
+{
+  "name": "tt-bot",
+  "version": "0.0.1",
+  "description": "Project Cars 2 Time Trials Leaderboard Bot for Discord.",
+  "main": "bot.js",
+  "author": "PCDC-Havnor",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "engines": {
+    "node": "8.9.3"
+  }
+}
