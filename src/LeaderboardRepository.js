@@ -4,13 +4,13 @@ class LeaderboardRepository {
 
     constructor(trackId, vehicleId) {
 
-        this.fetchLapTimes = async function fetchLaptimes() {
+        this.fetchLapTimes = async () => {
             let lapTimes = [];
             let page = 1;
             let lastResponse = null;
             while (page === 1 || (lastResponse != null && lastResponse.Page < lastResponse.Pages)) {
                 lastResponse = await requestLeaderboard(trackId, vehicleId, page);
-                lastResponse.Times.forEach(((value, index) => {
+                lastResponse.Times.forEach(((value) => {
                     lapTimes.push(value)
                 }));
                 page++
