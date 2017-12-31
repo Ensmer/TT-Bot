@@ -11,4 +11,4 @@ node_modules/
 ### Custom
 auth.json
 dist*
-
+ecosystem.config.js
