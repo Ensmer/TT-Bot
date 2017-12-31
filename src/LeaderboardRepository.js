@@ -1,4 +1,4 @@
-const request = require('request-promise');
+import request from 'request-promise'
 
 class LeaderboardRepository {
 

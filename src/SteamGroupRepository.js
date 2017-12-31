@@ -1,6 +1,6 @@
-const request = require('request-promise');
-const xmlParser = require('xml2json');
-const GroupIdentifierType = require('./GroupIdentifierType');
+import request from 'request-promise'
+import xmlParser from 'xml2json'
+import GroupIdentifierType from './GroupIdentifierType'
 
 class SteamGroupRepository {
     constructor(groupIdentifier, groupIdentifierType) {

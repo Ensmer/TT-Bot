@@ -1,17 +1,12 @@
-const auth = require('../auth.json');
+import auth from '../auth.json'
+import Discord from 'discord.js'
+import LeaderboardRepository from './LeaderboardRepository'
+import SteamGroupRepository from './SteamGroupRepository'
+import MemberFilter from './MemberFilter'
+import GroupIdentifierType from './GroupIdentifierType'
+import lapTimeFormatter from './LapTimeFormatter'
 
-const Discord = require('discord.js');
 const client = new Discord.Client();
-
-const LeaderboardRepository = require('./LeaderboardRepository');
-const SteamGroupRepository = require('./SteamGroupRepository');
-
-const MemberFilter = require('./MemberFilter');
-
-const GroupIdentifierType = require('./GroupIdentifierType');
-
-const lapTimeFormatter = require('./LapTimeFormatter');
-
 const BOT_PREFIX = '!tt-';
 
 client.login(auth.token);
