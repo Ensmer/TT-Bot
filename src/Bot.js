@@ -1,10 +1,10 @@
 import auth from '../auth.json'
 import Discord from 'discord.js'
-import LeaderboardRepository from './LeaderboardRepository'
-import SteamGroupRepository from './SteamGroupRepository'
-import MemberFilter from './MemberFilter'
-import GroupIdentifierType from './GroupIdentifierType'
-import lapTimeFormatter from './LapTimeFormatter'
+import LeaderboardRepository from './repository/LeaderboardRepository'
+import SteamGroupRepository from './repository/SteamGroupRepository'
+import MemberFilter from './filter/MemberFilter'
+import GroupIdentifierType from './common/GroupIdentifierType'
+import lapTimeFormatter from './formatter/LapTimeFormatter'
 
 const client = new Discord.Client();
 const BOT_PREFIX = '!tt-';
