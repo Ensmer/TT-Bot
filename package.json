@@ -4,6 +4,9 @@
   "description": "Project Cars 2 Time Trials Leaderboard Bot for Discord.",
   "main": "bot.js",
   "author": "PCDC-Havnor",
+  "scripts": {
+    "start": "node -r babel-register src/Bot.js"
+  },
   "dependencies": {
     "discord.js": "^11.2.1",
     "discord-akairo": "^7.5.1",
