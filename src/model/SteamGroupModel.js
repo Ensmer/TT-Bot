@@ -1,10 +1,8 @@
 import mongoose from 'mongoose'
 
-let Schema = mongoose.Schema;
-
 const steamGroupSchema = new mongoose.Schema({
     guild: {
-        type: Schema.ObjectId,
+        type: mongoose.Schema.ObjectId,
         ref: 'Guild',
         required: true
     },
@@ -13,7 +11,7 @@ const steamGroupSchema = new mongoose.Schema({
         required: true
     },
     groupIdentifierType: {
-        type: String,
+        type: Number,
         required: true
     }
 });

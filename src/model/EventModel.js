@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const eventSchema = new mongoose.Schema({
     guild: {
-        type: Schema.ObjectId,
+        type: mongoose.Schema.ObjectId,
         ref: 'Guild',
         required: true
     },

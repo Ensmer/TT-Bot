@@ -6,6 +6,7 @@
   "author": "PCDC-Havnor",
   "dependencies": {
     "discord.js": "^11.2.1",
+    "discord-akairo": "^7.5.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
     "xml2json": "^0.11.0",
