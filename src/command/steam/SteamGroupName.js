@@ -34,6 +34,9 @@ class SteamGroupNameCommand extends Command {
             }
             message.channel.send(`Group name is set to ${name}`)
         });
+        if (guildModel.deleteCommands && message.deletable) {
+            message.delete()
+        }
     }
 }
 

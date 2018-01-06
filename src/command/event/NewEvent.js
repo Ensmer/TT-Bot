@@ -36,6 +36,9 @@ class NewEvent extends Command {
             }
             message.channel.send(`New event: Track = ${trackId}, Vehicle = ${vehicleId}`)
         });
+        if (guildModel.deleteCommands && message.deletable) {
+            message.delete()
+        }
     }
 }
 

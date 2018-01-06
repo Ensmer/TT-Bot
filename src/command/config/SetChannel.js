@@ -16,6 +16,9 @@ class SetChannel extends Command {
         guildModel.channelId = message.channel.id;
         guildModel.save();
         message.channel.send(`Bot channel is set to #${message.channel.name}`)
+        if (guildModel.deleteCommands && message.deletable) {
+            message.delete()
+        }
     }
 }
 

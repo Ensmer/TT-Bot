@@ -8,6 +8,10 @@ const guildSchema = new mongoose.Schema({
     channelId: {
         type: String,
         required: false
+    },
+    deleteCommands: {
+        type: Boolean,
+        required: false
     }
 });
 

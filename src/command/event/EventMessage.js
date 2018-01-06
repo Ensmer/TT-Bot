@@ -24,9 +24,13 @@ class EventMessage extends Command {
                 message.reply('Event could not be found, set an event first.')
             } else {
                 eventModel.eventMessage = eventMessage;
-                eventModel.save()
+                eventModel.save();
+                message.reply('Event message is set.');
             }
         });
+        if (guildModel.deleteCommands && message.deletable) {
+            message.delete()
+        }
     }
 }
 

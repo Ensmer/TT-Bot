@@ -35,6 +35,9 @@ class EventLeaderboard extends Command {
                 message.channel.send(`${eventMessage} \n \`\`\`${lapTmesMessage}\`\`\``)
             }
         });
+        if (guildModel.deleteCommands && message.deletable) {
+            message.delete()
+        }
     }
 }
 
