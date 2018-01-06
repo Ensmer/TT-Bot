@@ -4,6 +4,10 @@ const guildSchema = new mongoose.Schema({
     id: {
         type: String,
         required: true
+    },
+    channelId: {
+        type: String,
+        required: false
     }
 });
 

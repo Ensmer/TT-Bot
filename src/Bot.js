@@ -17,13 +17,9 @@ const client = new AkairoClient({
     prefix: settings.prefix,
     commandDirectory: './src/command/'
 }, {});
+
 client.login(settings.token).then(() => {
     console.log('Logged in!');
-});
-
-// Events
-client.on('ready', () => {
-    console.log('I am ready!');
     client.guilds.array().forEach(((guild) => {
         checkGuild(guild);
     }))
