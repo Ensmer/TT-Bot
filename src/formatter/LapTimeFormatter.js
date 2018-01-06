@@ -3,6 +3,9 @@ const formatLapTimes = function (lapTimes) {
     lapTimes.forEach(((value, index) => {
         message = message.concat((index + 1) + ". " + value.UserName + " " + msToTime(value.LapTime) + "\n")
     }));
+    if (message == "") {
+        message = "No Times Set"
+    }
     return message
 };
 
