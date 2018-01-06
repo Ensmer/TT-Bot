@@ -27,8 +27,12 @@ class EventLeaderboard extends Command {
                 let groupMembers = await new SteamGroupRepository(steamGroupModel.groupIdentifier, steamGroupModel.groupIdentifierType).fetchGroupMembers();
                 let lapTimes = await new LeaderboardRepository(eventModel.trackId, eventModel.vehicleId).fetchLapTimes();
                 let filteredLapTimes = new MemberFilter(groupMembers).filterLapTimes(lapTimes);
-                let response = lapTimeFormatter.formatLapTimes(filteredLapTimes);
-                message.channel.send(response)
+                let lapTmesMessage = lapTimeFormatter.formatLapTimes(filteredLapTimes);
+                let eventMessage = eventModel.eventMessage;
+                if (eventMessage == null) {
+                    eventMessage = "You can se a message here. Ex: !tt-eventMessage \"YOUR_MESSAGE_HERE\""
+                }
+                message.channel.send(`${eventMessage} \n \`\`\`${lapTmesMessage}\`\`\``)
             }
         });
     }

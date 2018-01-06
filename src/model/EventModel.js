@@ -13,6 +13,10 @@ const eventSchema = new mongoose.Schema({
     vehicleId: {
         type: String,
         required: false
+    },
+    eventMessage: {
+        type: String,
+        required: false
     }
 });
 
