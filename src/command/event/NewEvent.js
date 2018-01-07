@@ -13,7 +13,8 @@ class NewEvent extends Command {
                     id: 'trackId'
                 },
                 {
-                    id: 'vehicleId'
+                    id: 'vehicleId',
+                    default: '0'
                 }
             ]
         });

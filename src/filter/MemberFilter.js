@@ -3,7 +3,7 @@ class MemberFilter {
 
         this.filterLapTimes = (lapTimes) => {
             return lapTimes.filter(value =>
-                memberIds.includes(value.SteamId)
+                memberIds.includes(value.steamId)
             )
         }
     }
