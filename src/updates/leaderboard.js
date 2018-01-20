@@ -6,7 +6,12 @@ import responseLeaderboard from '../responses/leaderboard'
 
 const start = (client) => {
     let rule = new schedule.RecurrenceRule();
-    rule.hour = settings.updateHour;
+    rule.second = settings.updateSchedule.second;
+    rule.minute = settings.updateSchedule.minute;
+    rule.hour = settings.updateSchedule.hour;
+    rule.dayOfWeek = settings.updateSchedule.dayOfWeek;
+    rule.month = settings.updateSchedule.month;
+    rule.year = settings.updateSchedule.year;
 
     schedule.scheduleJob(rule, () => {
         client.guilds.array().forEach((async (guild) => {
