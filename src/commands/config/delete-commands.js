@@ -26,7 +26,10 @@ class DeleteCommands extends Command {
             final = 'false'
         }
         guildModel.save();
-        message.channel.send(`Bot config deleteCommands is set to ${final}.`)
+        message.channel.send(`Bot config deleteCommands is set to ${final}.`);
+        if (guildModel.deleteCommands && message.deletable) {
+            message.delete()
+        }
     }
 }
 
