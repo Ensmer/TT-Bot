@@ -12,6 +12,10 @@ const guildSchema = new mongoose.Schema({
     deleteCommands: {
         type: Boolean,
         required: false
+    },
+    updatesEnabled: {
+        type: Boolean,
+        required: false
     }
 });
 

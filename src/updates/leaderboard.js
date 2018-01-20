@@ -4,14 +4,14 @@ import GuildModel from '../models/guild'
 import EventModel from "../models/event";
 import responseLeaderboard from '../responses/leaderboard'
 
-const startJob = (client) => {
+const start = (client) => {
     let rule = new schedule.RecurrenceRule();
-    rule.hour = settings.leaderboardJobHour;
+    rule.hour = settings.updateHour;
 
     schedule.scheduleJob(rule, () => {
         client.guilds.array().forEach((async (guild) => {
             let guildModel = await GuildModel.findOne({id: guild.id});
-            if (guildModel.channelId != null) {
+            if (guildModel.updatesEnabled && guildModel.channelId != null) {
                 let channel = guild.channels.get(guildModel.channelId);
                 await EventModel.findOne({guild: guildModel}).then(async (eventModel) => {
                     if (eventModel != null) {
@@ -23,4 +23,4 @@ const startJob = (client) => {
     })
 };
 
-module.exports.startJob = startJob;
+module.exports.start = start;

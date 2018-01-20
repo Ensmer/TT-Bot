@@ -3,7 +3,7 @@ import settings from '../settings.json'
 import {AkairoClient} from 'discord-akairo'
 import mongoose from 'mongoose'
 import GuildModel from './models/guild'
-import leaderboardJob from './jobs/leaderboard'
+import LeaderboardUpdates from './updates/leaderboard'
 
 // Setup DB
 mongoose.Promise = Promise;
@@ -24,7 +24,7 @@ client.login(settings.token).then(() => {
     client.guilds.array().forEach(((guild) => {
         checkGuild(guild);
     }));
-    leaderboardJob.startJob(client)
+    LeaderboardUpdates.start(client)
 });
 
 client.on('guildCreate', async (guild) => {
