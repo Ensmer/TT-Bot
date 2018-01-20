@@ -1,6 +1,6 @@
 import request from 'request-promise'
 import xmlParser from 'xml2json'
-import GroupIdentifierType from '../common/GroupIdentifierType'
+import GroupIdentifierType from '../constants/group-identifier-type'
 
 class SteamGroupRepository {
     constructor(groupIdentifier, groupIdentifierType) {

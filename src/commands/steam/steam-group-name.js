@@ -1,7 +1,7 @@
 import {Command} from 'discord-akairo'
-import GuildModel from '../../model/GuildModel'
-import SteamGroupModel from '../../model/SteamGroupModel'
-import GroupIdentifierType from '../../common/GroupIdentifierType'
+import GuildModel from '../../models/guild'
+import SteamGroupModel from '../../models/steam-group'
+import GroupIdentifierType from '../../constants/group-identifier-type'
 
 class SteamGroupNameCommand extends Command {
     constructor() {

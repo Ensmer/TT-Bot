@@ -1,6 +1,6 @@
 import {Command} from "discord-akairo";
-import EventModel from "../../model/EventModel";
-import GuildModel from "../../model/GuildModel";
+import EventModel from "../../models/event";
+import GuildModel from "../../models/guild";
 
 class EventMessage extends Command {
     constructor() {

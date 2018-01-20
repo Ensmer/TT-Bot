@@ -2,7 +2,7 @@ import config from './config'
 import settings from '../settings.json'
 import {AkairoClient} from 'discord-akairo'
 import mongoose from 'mongoose'
-import GuildModel from './model/GuildModel'
+import GuildModel from './models/guild'
 
 // Setup DB
 mongoose.Promise = Promise;
@@ -15,7 +15,7 @@ mongoose.connection.on('error', () => {
 const client = new AkairoClient({
     ownerID: settings.ownerId,
     prefix: settings.prefix,
-    commandDirectory: './src/command/'
+    commandDirectory: './src/commands/'
 }, {});
 
 client.login(settings.token).then(() => {

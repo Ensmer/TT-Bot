@@ -78,7 +78,7 @@ const parseSectorTimes = (sectorTimesString) => {
 
 const parseDetails = (element) => {
     let details = {};
-    details.drivingModel = lastSubstringAfter(element[0].attribs.title, 'Driving model: ');
+    details.drivingModel = lastSubstringAfter(element[0].attribs.title, 'Driving models: ');
     details.setup = lastSubstringAfter(element[1].attribs.title, 'Setup: ');
     details.controller = lastSubstringAfter(element[2].attribs.title, 'Controller: ');
     details.camera = lastSubstringAfter(element[3].attribs.title, 'Camera: ');

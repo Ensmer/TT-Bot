@@ -1,5 +1,5 @@
 import {Command} from "discord-akairo";
-import GuildModel from "../../model/GuildModel";
+import GuildModel from "../../models/guild";
 
 class SetChannel extends Command {
     constructor() {

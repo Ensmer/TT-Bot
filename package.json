@@ -5,7 +5,7 @@
   "main": "bot.js",
   "author": "PCDC-Havnor",
   "scripts": {
-    "start": "node -r babel-register src/Bot.js"
+    "start": "node -r babel-register src/bot.js"
   },
   "dependencies": {
     "discord.js": "^11.2.1",

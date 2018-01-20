@@ -1,6 +1,6 @@
 import {Command} from 'discord-akairo'
-import GuildModel from '../../model/GuildModel'
-import EventModel from '../../model/EventModel'
+import GuildModel from '../../models/guild'
+import EventModel from '../../models/event'
 
 class NewEvent extends Command {
     constructor() {

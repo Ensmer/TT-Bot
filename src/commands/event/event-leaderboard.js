@@ -1,11 +1,11 @@
 import {Command} from 'discord-akairo'
-import GuildModel from '../../model/GuildModel'
-import SteamGroupModel from '../../model/SteamGroupModel'
-import EventModel from '../../model/EventModel'
-import lapTimeFormatter from "../../formatter/LapTimeFormatter";
-import LeaderboardRepository from "../../repository/LeaderboardRepository";
-import SteamGroupRepository from "../../repository/SteamGroupRepository";
-import MemberFilter from "../../filter/MemberFilter";
+import GuildModel from '../../models/guild'
+import SteamGroupModel from '../../models/steam-group'
+import EventModel from '../../models/event'
+import lapTimeFormatter from "../../formatters/lap-time";
+import LeaderboardRepository from "../../repositories/leaderboard";
+import SteamGroupRepository from "../../repositories/steam-group";
+import MemberFilter from "../../filters/member";
 
 class EventLeaderboard extends Command {
     constructor() {
